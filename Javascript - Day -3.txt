@@ -1,0 +1,116 @@
+
+1 . Json iterate over all for loops.....
+
+SOURCE CODE : 
+ var marks = [45, 67, 70, 89];
+// console.log(marks[2]);
+// console.log(marks.length)
+
+// for loop
+for (var i = 1; i < marks.length; i++) {
+    var result_For = ["i in for loop", marks[i]]
+    console.log(result_For)
+}
+console.log(JSON.stringify(result_For))
+
+// for...in -> i is index
+
+for (var i in marks) {
+    var result_ForIN = ["i in for in loop", marks[i]]
+    console.log(result_ForIN)
+}
+console.log(JSON.stringify(result_ForIN))
+
+//  for ... of -> val is to take value
+
+for (val of marks) {
+    var result_ForOF = ["i in for of loop", val]
+    console.log(result_ForOF)
+}
+console.log(JSON.stringify(result_ForOF))
+
+OUTPUT :
+
+(2) ['i in for loop', 67]0: "i in for loop"1: 67length: 2[[Prototype]]: Array(0)
+array.js:17 (2) ['i in for loop', 70]
+array.js:17 (2) ['i in for loop', 89]
+array.js:19 ["i in for loop",89]
+array.js:25 (2) ['i in for in loop', 45]
+array.js:25 (2) ['i in for in loop', 67]
+array.js:25 (2) ['i in for in loop', 70]
+array.js:25 (2) ['i in for in loop', 89]
+array.js:27 ["i in for in loop",89]
+array.js:33 (2) ['i in for of loop', 45]
+array.js:33 (2) ['i in for of loop', 67]
+array.js:33 (2) ['i in for of loop', 70]
+array.js:33 (2) ['i in for of loop', 89]
+array.js:35 ["i in for of loop",89]
+
+
+
+2 . Create your own resume data in JSON format
+
+SOURCE CODE :
+
+var resume = {
+    pic: {
+        picture: "Cool😎 of Ashok"
+    },
+
+    Contact_info: {
+        Name: "Ashok -> Full stack developer",
+        Address: "33 west, Ponnagaram, 6th street, madurai",
+        phone: "912356789",
+        Email: "DavAshokc@gmail.com"
+    },
+    Skills: {
+        Language: ["Tamil", "English"],
+        Business: "Stock market",
+        Know_language: ["html", "css", "Javascript"]
+    },
+    Education: {
+        Completed_10th: 2017,
+        Completed_12th: 2019,
+        clg_Passout: 2022
+    },
+    Certification: {
+        Complition: "Basics of internet",
+        Current: 'Currently pursuing my paid intenship at "Guvi"'
+    }
+}
+
+console.log(resume)
+console.log(JSON.stringify(resume))
+
+
+OUTPUT :
+ 
+console.log(JSON.stringify(resume))
+
+{"pic":{"picture":"Cool😎 of Ashok"},"Contact_info":{"Name":"Ashok -> Full stack developer","Address":"33 west, Ponnagaram, 6th street, madurai","phone":"912356789","Email":"DavAshokc@gmail.com"},"Skills":{"Language":["Tamil","English"],"Business":"Stock market","Know_language":["html","css","Javascript"]},"Education":{"Completed_10th":2017,"Completed_12th":2019,"clg_Passout":2022},"Certification":{"Complition":"Basics of internet","Current":"Currently pursuing my paid intenship at \"Guvi\""}}
+
+
+
+
+
+3 . Read About window, screen, Document of object in javascript
+
+Document Object :
+When we push html Document into browser , then the browser Take it as Document Object.
+⦁	  The document object is the root node of the HTML document.
+⦁	 The document object is know as property of  window object.
+⦁	   The document object is Executed as :
+                     window. document or we can use just document
+
+
+Window object :
+when a HTML document contains iframe tag ( link another document), the browser creates window object for the  document.
+⦁	 The window object is know as parent object of all property and method
+⦁	  The window object provides property, method or finction like :
+                        DOM -- document object model
+                         BOM -- Browser object model ... (ext)
+⦁	    The window object is access with :
+                         console.log(window) or only with window
+                                 
+Screen object :
+ Screen object contains all information About user Screen
